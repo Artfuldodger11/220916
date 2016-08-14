@@ -7,6 +7,9 @@ public class UserBuilder {
     private Long userId;
     private String firstName;
     private String lastName;
+    private String email;
+    private String login;
+    private String password;
 
 
     private UserBuilder() { }
@@ -16,10 +19,14 @@ public class UserBuilder {
     }
 
     public User build() {
+
         User user = new User();
         user.setUserId(userId);
         user.setFirstName(firstName);
         user.setLastName(lastName);
+        user.setEmail(email);
+        user.setLogin(login);
+        user.setPassword(password);
         return user;
     }
 
@@ -35,6 +42,21 @@ public class UserBuilder {
 
     public UserBuilder withLastName(String lastName) {
         this.lastName = lastName;
+        return this;
+    }
+
+    public UserBuilder withLogin (String login) {
+        this.login = login;
+        return this;
+    }
+
+    public UserBuilder withPssword (String Password) {
+        this.password = password;
+        return this;
+    }
+
+    public UserBuilder withEmail (String email) {
+        this.email = email;
         return this;
     }
 

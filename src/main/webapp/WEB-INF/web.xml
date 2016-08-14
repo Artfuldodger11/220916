@@ -12,55 +12,89 @@
 
     <filter-mapping>
         <filter-name>MVCFilter</filter-name>
-        <url-pattern>/*</url-pattern>
+        <url-pattern>/</url-pattern>
     </filter-mapping>
 
-<!--
-    <servlet>
-        <servlet-name>HelloWorldServlet</servlet-name>
-        <servlet-class>lv.javaguru.java2.servlet.HelloWorldServlet</servlet-class>
-    </servlet>
+ <!--
+        <servlet>
+            <servlet-name>HelloWorldServlet</servlet-name>
+            <servlet-class>lv.javaguru.java2.servlet.HelloWorldServlet</servlet-class>
+        </servlet>
 
-    <servlet-mapping>
-        <servlet-name>HelloWorldServlet</servlet-name>
-        <url-pattern>/*</url-pattern>
-    </servlet-mapping>
-
-    <servlet-mapping>
-        <servlet-name>HelloWorldServlet</servlet-name>
-        <url-pattern>/hello</url-pattern>
-    </servlet-mapping>
+        <servlet-mapping>
+            <servlet-name>HelloWorldServlet</servlet-name>
+            <url-pattern>/*</url-pattern>
+        </servlet-mapping>
 
 
-    <servlet>
-        <servlet-name>ParameterProcessingServlet</servlet-name>
-        <servlet-class>lv.javaguru.java2.servlet.ParameterProcessingServlet</servlet-class>
-    </servlet>
 
-    <servlet-mapping>
-        <servlet-name>ParameterProcessingServlet</servlet-name>
-        <url-pattern>/paramProcessing</url-pattern>
-    </servlet-mapping>
 
-    <servlet>
-        <servlet-name>SessionUsageServlet</servlet-name>
-        <servlet-class>lv.javaguru.java2.servlet.SessionUsageServlet</servlet-class>
-    </servlet>
 
-    <servlet-mapping>
-        <servlet-name>SessionUsageServlet</servlet-name>
-        <url-pattern>/session</url-pattern>
-    </servlet-mapping>
+        <servlet-mapping>
+            <servlet-name>HelloWorldServlet</servlet-name>
+            <url-pattern>/hello</url-pattern>
+        </servlet-mapping>
 
-    <servlet>
-        <servlet-name>RedirectToJSPServlet</servlet-name>
-        <servlet-class>lv.javaguru.java2.servlet.RedirectToJSPServlet</servlet-class>
-    </servlet>
 
-    <servlet-mapping>
-        <servlet-name>RedirectToJSPServlet</servlet-name>
-        <url-pattern>/jsp</url-pattern>
-    </servlet-mapping>
--->
+        <servlet>
+            <servlet-name>ParameterProcessingServlet</servlet-name>
+            <servlet-class>lv.javaguru.java2.servlet.ParameterProcessingServlet</servlet-class>
+        </servlet>
 
+        <servlet-mapping>
+            <servlet-name>ParameterProcessingServlet</servlet-name>
+            <url-pattern>/paramProcessing</url-pattern>
+        </servlet-mapping>
+
+        <servlet>
+            <servlet-name>SessionUsageServlet</servlet-name>
+            <servlet-class>lv.javaguru.java2.servlet.SessionUsageServlet</servlet-class>
+        </servlet>
+
+        <servlet-mapping>
+            <servlet-name>SessionUsageServlet</servlet-name>
+            <url-pattern>/session</url-pattern>
+        </servlet-mapping>
+
+
+
+        <welcome-file-list>
+            <welcome-file>views/index.jsp</welcome-file>
+            <welcome-file>views/index.htm</welcome-file>
+            <welcome-file>views/index.html</welcome-file>
+            <welcome-file>views/default.jsp</welcome-file>
+            <welcome-file>views/default.htm</welcome-file>
+            <welcome-file>views/default.html</welcome-file>
+        </welcome-file-list>
+
+        <servlet>
+            <servlet-name>IndexToRegistrationPageServlet</servlet-name>
+            <servlet-class>lv.javaguru.java2.servlet.IndexToRegistrationPageServlet</servlet-class>
+        </servlet>
+
+        <servlet-mapping>
+            <servlet-name>IndexToRegistrationPageServlet</servlet-name>
+            <url-pattern>/IndexReg</url-pattern>
+        </servlet-mapping>
+
+        <servlet>
+            <servlet-name>IndexToSignInPageServlet</servlet-name>
+            <servlet-class>lv.javaguru.java2.servlet.IndexToSignInPageServlet</servlet-class>
+        </servlet>
+
+        <servlet-mapping>
+            <servlet-name>IndexToSignInPageServlet</servlet-name>
+            <url-pattern>/IndexSign</url-pattern>
+        </servlet-mapping>
+
+        <servlet>
+            <servlet-name>userRegistrationServlet</servlet-name>
+            <servlet-class>lv.javaguru.java2.servlet.userRegistration</servlet-class>
+        </servlet>
+
+        <servlet-mapping>
+            <servlet-name>userRegistrationServlet</servlet-name>
+            <url-pattern>/UserRegister</url-pattern>
+        </servlet-mapping>
+     -->
 </web-app>

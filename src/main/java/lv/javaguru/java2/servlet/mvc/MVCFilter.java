@@ -14,7 +14,8 @@ public class MVCFilter implements Filter {
 
     public void init(FilterConfig filterConfig) throws ServletException {
         controllers = new HashMap<String, MVCController>();
-        controllers.put("/hello", new HelloWorldController());
+        controllers.put("/", new IndexController());
+        controllers.put("/views/indexToRegisterPage", new IndexRedirectController());
     }
 
     public void doFilter(ServletRequest request,

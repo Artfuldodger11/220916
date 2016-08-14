@@ -1,0 +1,108 @@
+
+
+.text {
+    font-family: Italic;
+    font-size: 50px;
+}
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+html {
+    background: #333;
+}
+
+.button {
+    width: 250px;
+    height: 70px;
+    margin: auto;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    font-size: 22px;
+    border: 3px solid #28F2B3;
+    color: #28F2B3;
+    line-height: 64px;
+    background: none;
+    white-space: nowrap;
+    overflow: hidden;
+    box-shadow: 0 0 5px #222;
+    border-radius: 70px;
+    -webkit-animation: over 6s infinite;
+    animation: over 6s infinite;
+}
+
+.button:hover {
+    width: 250px;
+    height: 70px;
+    margin: auto;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    font-size: 22px;
+    border: 3px solid #28F2B3;
+    color: white;
+    line-height: 64px;
+    background: #28F2B3;
+    white-space: nowrap;
+    overflow: hidden;
+    box-shadow: 0 0 5px #222;
+    border-radius: 70px;
+    -webkit-animation: over 6s infinite;
+    animation: over 6s infinite;
+
+}
+
+
+.button1 {
+    width: 250px;
+    height: 70px;
+    margin: auto;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: -160px;
+    bottom: 0;
+    font-size: 22px;
+    border: 3px solid #b47ff2;
+    color: #b47ff2;
+    line-height: 64px;
+    background: none;
+    white-space: nowrap;
+    overflow: hidden;
+    box-shadow: 0 0 5px #222;
+    border-radius: 70px;
+    -webkit-animation: over 6s infinite;
+    animation: over 6s infinite;
+}
+
+.button1:hover {
+    width: 250px;
+    height: 70px;
+    margin: auto;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: -160px;
+    bottom: 0;
+    font-size: 22px;
+    border: 3px solid #b47ff2;
+    color: white;
+    line-height: 64px;
+    background: #b47ff2;
+    white-space: nowrap;
+    overflow: hidden;
+    box-shadow: 0 0 5px #222;
+    border-radius: 70px;
+    -webkit-animation: over 6s infinite;
+    animation: over 6s infinite;
+
+}
+
+
+

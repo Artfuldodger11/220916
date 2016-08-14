@@ -1,0 +1,175 @@
+html {
+    background: #333;
+
+}
+
+.regInput1 {
+    width: 320px;
+    text-align: center;
+    height: 40px;
+    position: fixed;
+    left: 40%;
+    right: 0;
+    top: 60px;
+    bottom: 0;
+    font-size: 22px;
+    border: 3px solid #28F2B3;
+    line-height: 64px;
+    background: none;
+    white-space: nowrap;
+    overflow: hidden;
+    box-shadow: 0 0 5px #222;
+    border-radius: 70px;
+    -webkit-animation: over 6s infinite;
+    animation: over 6s infinite;
+}
+
+.regInput2 {
+    width: 320px;
+    text-align: center;
+    height: 40px;
+    position: fixed;
+    left: 40%;
+    right: 0;
+    top: 115px;
+    bottom: 0;
+    font-size: 22px;
+    border: 3px solid #28F2B3;
+    line-height: 64px;
+    background: none;
+    white-space: nowrap;
+    overflow: hidden;
+    box-shadow: 0 0 5px #222;
+    border-radius: 70px;
+    -webkit-animation: over 6s infinite;
+    animation: over 6s infinite;
+}
+
+.regInput3 {
+    width: 320px;
+    text-align: center;
+    height: 40px;
+    position: fixed;
+    left: 40%;
+    right: 0;
+    top: 160px;
+    bottom: 0;
+    font-size: 22px;
+    border: 3px solid #28F2B3;
+    line-height: 64px;
+    background: none;
+    white-space: nowrap;
+    overflow: hidden;
+    box-shadow: 0 0 5px #222;
+    border-radius: 70px;
+    -webkit-animation: over 6s infinite;
+    animation: over 6s infinite;
+}
+
+.regInput4 {
+    width: 320px;
+    text-align: center;
+    height: 40px;
+    position: fixed;
+    left: 40%;
+    right: 0;
+    top: 215px;
+    bottom: 0;
+    font-size: 22px;
+    border: 3px solid #28F2B3;
+    line-height: 64px;
+    background: none;
+    white-space: nowrap;
+    overflow: hidden;
+    box-shadow: 0 0 5px #222;
+    border-radius: 70px;
+    -webkit-animation: over 6s infinite;
+    animation: over 6s infinite;
+}
+
+.regInput5 {
+    width: 320px;
+    text-align: center;
+    height: 40px;
+    position: fixed;
+    left: 40%;
+    right: 0;
+    top: 260px;
+    bottom: 0;
+    font-size: 22px;
+    border: 3px solid #28F2B3;
+    line-height: 64px;
+    background: none;
+    white-space: nowrap;
+    overflow: hidden;
+    box-shadow: 0 0 5px #222;
+    border-radius: 70px;
+    -webkit-animation: over 6s infinite;
+    animation: over 6s infinite;
+}
+
+.regInput6 {
+    width: 320px;
+    text-align: center;
+    height: 40px;
+    position: fixed;
+    left: 40%;
+    right: 0;
+    top: 250px;
+    bottom: 0;
+    font-size: 22px;
+    border: 3px solid #28F2B3;
+    line-height: 64px;
+    background: none;
+    white-space: nowrap;
+    overflow: hidden;
+    box-shadow: 0 0 5px #222;
+    border-radius: 70px;
+    -webkit-animation: over 6s infinite;
+    animation: over 6s infinite;
+}
+
+.regInput7 {
+    text-align: center;
+    width: 250px;
+    height: 70px;
+    margin: auto;
+    position: relative;
+    left: 42%;
+    right: 0;
+    top: 200px;
+    bottom: 0;
+    font-size: 22px;
+    border: 3px solid #28F2B3;
+    color: white;
+    line-height: 64px;
+    background: #28F2B3;
+    white-space: nowrap;
+    overflow: hidden;
+    box-shadow: 0 0 5px #222;
+    border-radius: 70px;
+    -webkit-animation: over 6s infinite;
+    animation: over 6s infinite;
+}
+
+.regInput7:hover {
+    text-align: center;
+    width: 250px;
+    height: 70px;
+    margin: auto;
+    position: relative;
+    left: 42%;
+    right: 0;
+    top: 200px;
+    bottom: 0;
+    font-size: 22px;
+    border: 3px solid #28F2B3;
+    line-height: 64px;
+    background: transparent;
+    white-space: nowrap;
+    overflow: hidden;
+    box-shadow: 0 0 5px #222;
+    border-radius: 70px;
+    -webkit-animation: over 6s infinite;
+    animation: over 6s infinite;
+}

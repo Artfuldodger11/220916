@@ -1,0 +1,90 @@
+html {
+    background: #333;
+}
+
+.signInput1 {
+    width: 320px;
+    text-align: center;
+    height: 40px;
+    position: fixed;
+    left: 40%;
+    right: 0;
+    top: 185px;
+    bottom: 0;
+    font-size: 22px;
+    border: 3px solid #b47ff2;
+    line-height: 64px;
+    background: none;
+    white-space: nowrap;
+    overflow: hidden;
+    box-shadow: 0 0 5px #222;
+    border-radius: 70px;
+    -webkit-animation: over 6s infinite;
+    animation: over 6s infinite;
+}
+
+.signInput2 {
+    width: 320px;
+    text-align: center;
+    height: 40px;
+    position: fixed;
+    left: 40%;
+    right: 0;
+    top: 235px;
+    bottom: 0;
+    font-size: 22px;
+    border: 3px solid #b47ff2;
+    line-height: 64px;
+    background: none;
+    white-space: nowrap;
+    overflow: hidden;
+    box-shadow: 0 0 5px #222;
+    border-radius: 70px;
+    -webkit-animation: over 6s infinite;
+    animation: over 6s infinite;
+}
+
+.signInput3 {
+    text-align: center;
+    width: 250px;
+    height: 70px;
+    margin: auto;
+    position: relative;
+    left: 42%;
+    right: 0;
+    top: 245px;
+    bottom: 0;
+    font-size: 22px;
+    border: 3px solid #b47ff2;
+    color: white;
+    line-height: 64px;
+    background: #b47ff2;
+    white-space: nowrap;
+    overflow: hidden;
+    box-shadow: 0 0 5px #222;
+    border-radius: 70px;
+    -webkit-animation: over 6s infinite;
+    animation: over 6s infinite;
+}
+
+.signInput3:hover {
+    text-align: center;
+    width: 250px;
+    height: 70px;
+    margin: auto;
+    position: relative;
+    left: 42%;
+    right: 0;
+    top: 245px;
+    bottom: 0;
+    font-size: 22px;
+    border: 3px solid #b47ff2;
+    line-height: 64px;
+    background: transparent;
+    white-space: nowrap;
+    overflow: hidden;
+    box-shadow: 0 0 5px #222;
+    border-radius: 70px;
+    -webkit-animation: over 6s infinite;
+    animation: over 6s infinite;
+}
