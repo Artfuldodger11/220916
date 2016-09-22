@@ -10,6 +10,7 @@ public class UserBuilder {
     private String email;
     private String login;
     private String password;
+    private int accessLevel;
 
 
     private UserBuilder() { }
@@ -27,6 +28,7 @@ public class UserBuilder {
         user.setEmail(email);
         user.setLogin(login);
         user.setPassword(password);
+        user.setAccessLevel(accessLevel);
         return user;
     }
 

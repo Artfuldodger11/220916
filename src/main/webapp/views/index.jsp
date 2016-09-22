@@ -2,6 +2,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html>
+
 <head>
     <title> Java 2 WEB TESTING</title>
     <meta http-equiv="content-type" content="text/html" charset="UTF-8">
@@ -10,16 +11,15 @@
 </head>
 
 <body>
-
-        <form action="/indexToRegisterPage">
-            <input class="button" type="submit" value="Registration">
-        </form>
+<%@ include file="/views/Header.jsp" %>
+<form method="get">
+        <div>
+            <input class="button" type="submit" name="RedirectToRegisterPage" value="Registration">
         </div>
         <br>
         <div>
-        <form action="/indexToSignInPage">
-            <input class="button1" type="submit" value="Sign In">
-        </form>
+            <input class="button1" type="submit" name = "RedirectToSignInPage" value="Sign In" >
         </div>
+</form>
 </body>
 </html>

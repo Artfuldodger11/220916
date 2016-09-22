@@ -1,25 +1,53 @@
 package lv.javaguru.java2.domain;
 
-import org.apache.commons.lang3.builder.EqualsBuilder;
-import org.apache.commons.lang3.builder.HashCodeBuilder;
+import javax.persistence.*;
 
+
+@Entity
+@Table(name = "users")
 public class User {
 
-    private Long userId;
+
+
+    @Column(name = "firstName")
     private String firstName;
+
+    @Column(name = "lastName")
     private String lastName;
-    private String email;
+
+    @Column(name="id", columnDefinition = "int")
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+
+    private Long userId;
+
+    @Column(name = "login")
     private String login;
+
+    @Column(name = "password")
     private String password;
 
+    @Column(name = "email")
+    private String email;
+
+    @Column(name = "accessLevel")
+    private int accessLevel;
 
 
+    @Override
+    public boolean equals(Object object) {
+        if (object==null) return false;
+        if (!(object instanceof User)) return false;
+        if (((User) object).getUserId()==this.userId) return true;
+        else return false;
 
-    public Long getUserId() {
+    }
+
+    public long getUserId() {
         return userId;
     }
 
-    public void setUserId(Long userId) {
+    public void setUserId(long userId) {
         this.userId = userId;
     }
 
@@ -39,36 +67,40 @@ public class User {
         this.lastName = lastName;
     }
 
-    public String getEmail() {return email;}
-
-    public void setEmail(String email) {this.email = email;}
-
-    public String getLogin() {return login;}
-
-    public void setLogin(String login) { this.login = login;}
-
-    public String getPassword() {return password;}
-
-    public void setPassword(String password) { this.password = password;}
-
-    public String getFullName() {
-        String fullName;
-        String space = " ";
-        firstName = getFirstName();
-        lastName = getLastName();
-        fullName  = firstName + space + lastName;
-        return fullName;
+    public void setLogin(String login) {
+        this.login = login;
     }
 
-    // potom sdelatj hashirovanije passworda
-    @Override
-    public boolean equals(Object o) {
-        return EqualsBuilder.reflectionEquals(this, o);
+    public String getLogin() {
+        return login;
     }
 
-    @Override
-    public int hashCode() {
-        return HashCodeBuilder.reflectionHashCode(this);
+    public void setPassword(String password) {
+        this.password = password;
     }
+
+    public String getPassword() {
+        return password;
+    }
+
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public int setAccessLevel(int accessLevel) {this.accessLevel = accessLevel;
+        return accessLevel;
+    }
+
+    public int getAccessLevel () {return accessLevel;}
+
+    public void setUserId(Long userId) {
+        this.userId = userId;
+    }
+
 
 }

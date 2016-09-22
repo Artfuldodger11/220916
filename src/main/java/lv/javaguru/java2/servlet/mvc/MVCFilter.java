@@ -6,16 +6,39 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+import lv.javaguru.java2.config.SpringConfig;
+import org.springframework.beans.BeansException;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
 
 public class MVCFilter implements Filter {
 
-    private Map<String, MVCController> controllers;
+    private final Map<String, MVCController> controllers = new HashMap<String, MVCController>();
 
+    private ApplicationContext springContext;
+    private static final Logger logger = Logger.getLogger(MVCFilter.class.getName());
+
+    private MVCController getBean(Class clazz){
+        return (MVCController) springContext.getBean(clazz);
+    }
 
     public void init(FilterConfig filterConfig) throws ServletException {
-        controllers = new HashMap<String, MVCController>();
-        controllers.put("/", new IndexController());
-        controllers.put("/views/indexToRegisterPage", new IndexRedirectController());
+
+
+        try {
+            springContext =
+                    new AnnotationConfigApplicationContext(SpringConfig.class);
+        } catch (BeansException e) {
+            logger.log(Level.INFO, "Spring context failed to start", e);
+        }
+
+        controllers.put("/", getBean(IndexController.class));
+        controllers.put("/registration", getBean(RegisterationController.class));
+        controllers.put("/signIn", getBean(SignInController.class));
     }
 
     public void doFilter(ServletRequest request,
@@ -27,14 +50,15 @@ public class MVCFilter implements Filter {
         String contextURI = req.getServletPath();
         MVCController controller = controllers.get(contextURI);
         if (controller != null) {
-            MVCModel model = controller.execute(req);
+            MVCModel model;
+            model = controller.processRequest(req);
 
             req.setAttribute("model", model.getData());
 
             ServletContext context = req.getServletContext();
-            RequestDispatcher requestDispacher =
+            RequestDispatcher requestDispatcher =
                     context.getRequestDispatcher(model.getViewName());
-            requestDispacher.forward(req, resp);
+            requestDispatcher.forward(req, resp);
         }
         else filterChain.doFilter(request,response);
     }

@@ -3,6 +3,8 @@ package lv.javaguru.java2.database.jdbc;
 import lv.javaguru.java2.database.DBException;
 import lv.javaguru.java2.database.UserDAO;
 import lv.javaguru.java2.domain.User;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Controller;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -10,6 +12,7 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
+@Component ("UserDAO_JDBC")
 public class UserDAOImpl extends DAOImpl implements UserDAO {
 
     @Override
@@ -23,7 +26,7 @@ public class UserDAOImpl extends DAOImpl implements UserDAO {
         try {
             connection = getConnection();
             PreparedStatement preparedStatement =
-                    connection.prepareStatement("insert into USERS values (default, ?, ?, ?, ?, ?, ?)", PreparedStatement.RETURN_GENERATED_KEYS);
+                    connection.prepareStatement("insert into USERS (firstName, lastName, id, email, login, password) values (default, ?, ?, ?, ?, ?, ?)", PreparedStatement.RETURN_GENERATED_KEYS);
             preparedStatement.setString(1, user.getFirstName());
             preparedStatement.setString(2, user.getLastName());
             preparedStatement.setLong(3, 0);
@@ -112,6 +115,35 @@ public class UserDAOImpl extends DAOImpl implements UserDAO {
             throw new DBException(e);
         } finally {
             closeConnection(connection);
+        }
+    }
+
+    @Override
+    public User getByLogin(String login) throws DBException {
+        Connection connect = null;
+
+        try {
+            connect = getConnection();
+            PreparedStatement prepStat = connect.prepareStatement("select * from users where Login = ?");
+            prepStat.setString(1, login);
+            ResultSet rs = prepStat.executeQuery();
+            User user = null;
+            if (rs.next()) {
+                user = new User();
+                user.setUserId(rs.getLong("UserID"));
+                user.setFirstName(rs.getString("FirstName"));
+                user.setLastName(rs.getString("LastName"));
+                user.setLogin(rs.getString("Login"));
+                user.setPassword(rs.getString("Password"));
+                user.setEmail(rs.getString("Email"));
+            }
+            return user;
+        } catch (Throwable e) {
+            System.out.println("Exception while execute UserDAOImpl.getByLogin()");
+            e.printStackTrace();
+            throw new DBException(e);
+        } finally {
+            closeConnection(connect);
         }
     }
 

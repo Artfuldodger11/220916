@@ -13,11 +13,10 @@ CREATE  TABLE IF NOT EXISTS `WEBTESTER_DATABASE`.`users` (
   `id` BIGINT(20) NOT NULL AUTO_INCREMENT ,
   `login` VARCHAR(45) NOT NULL ,
   `password` VARCHAR(45) NOT NULL ,
- -- `userType` CHAR(1) NOT NULL ,
+  `email` VARCHAR(45) NULL DEFAULT NULL ,
+  `accessLevel` INT(1) NOT NULL  ,
 
- -- `email` VARCHAR(45) NULL DEFAULT NULL ,
- -- `rosterShowStartDate` DATETIME NULL DEFAULT NULL ,
- -- `rosterShowEndDate` DATETIME NULL DEFAULT NULL ,
+
   PRIMARY KEY (`id`) ,
   UNIQUE INDEX `login_UNIQUE` (`login` ASC) )
   ENGINE = InnoDB;
